@@ -1,0 +1,391 @@
+---
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Join Grow Boston Greener in our mission to create a more sustainable, greener Boston through urban forestry, community gardens, and environmental education initiatives." />
+    <meta name="keywords" content="Boston green initiatives, urban forestry Boston, community gardens Boston, environmental sustainability, green spaces" />
+    <title>Grow Boston Greener - Creating a Sustainable Urban Environment</title>
+    <style>
+        :root {
+            --primary-green: #3B7B6F;
+            --light-green: #EDF3F0;
+            --dark-green: #2A5A50;
+            --accent-green: #75A99C;
+            --text-dark: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-green);
+        }
+
+        header {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: var(--dark-green);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-green);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 60%);
+            z-index: 1;
+        }
+
+        .hero * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--light-green);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card-header {
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-content {
+            padding: 1.8rem;
+            background: white;
+        }
+
+        .project-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .project-content ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .project-content ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .project-content ul li::before {
+            content: "•";
+            color: var(--primary-green);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .urban-forestry {
+            background-color: #2A5A50;
+        }
+
+        .community-gardens {
+            background-color: #3B7B6F;
+        }
+
+        .education {
+            background-color: #75A99C;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--primary-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--dark-green);
+        }
+
+        footer {
+            background-color: var(--dark-green);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grow Boston Greener</h1>
+        <p>Creating a sustainable, vibrant, and green future for Boston</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">Home</a></li>
+            <li><a href="/gbg/about.html">About</a></li>
+            <li><a href="/gbg/resources.html">Resources</a></li>
+            <li><a href="/gbg/blog.html">Blog</a></li>
+            <li><a href="/gbg/donate.html">Donate</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h2>Join Our Green Movement</h2>
+        <p>Together, we can transform Boston into a model of urban sustainability</p>
+        <a href="#get-involved" class="cta-button">Get Involved Today</a>
+    </div>
+
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Grow Boston Greener is a community-driven initiative dedicated to increasing Boston's urban tree canopy, creating sustainable green spaces, and promoting environmental education. Our mission is to make Boston one of the greenest cities in America through collaborative efforts with residents, businesses, and local government.</p>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>100,000+</h3>
+                    <p>Trees Planted</p>
+                </div>
+                <div class="stat-card">
+                    <h3>50+</h3>
+                    <p>Community Gardens</p>
+                </div>
+                <div class="stat-card">
+                    <h3>10,000+</h3>
+                    <p>Volunteers</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="initiatives">
+            <h2>Our Initiatives</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <div class="project-card-header urban-forestry">
+                        <h3>Urban Forestry</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Expanding Boston's tree canopy through strategic planting and maintenance programs.</p>
+                        <ul>
+                            <li>Street tree planting initiatives (<a href="/gbg/posts/spring-tree-planting-guide.html">View our planting guide</a>)</li>
+                            <li>Tree health monitoring</li>
+                            <li>Community tree care training</li>
+                            <li>Urban shade planning (<a href="/gbg/posts/urban-forest-benefits.html">Learn about the benefits</a>)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-header community-gardens">
+                        <h3>Community Gardens</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Creating and supporting neighborhood gardens that provide fresh produce and green spaces.</p>
+                        <ul>
+                            <li>Garden development programs (<a href="/gbg/posts/community-gardens-success.html">See success stories</a>)</li>
+                            <li>Sustainable growing practices (<a href="/gbg/posts/urban-gardening-boston.html">View gardening guide</a>)</li>
+                            <li>Local food production</li>
+                            <li>Community engagement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-header education">
+                        <h3>Education</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Offering workshops and programs on sustainable gardening and environmental stewardship.</p>
+                        <ul>
+                            <li>Environmental workshops</li>
+                            <li>School garden programs</li>
+                            <li>Composting education</li>
+                            <li>Youth leadership training</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-involved">
+            <h2>Get Involved</h2>
+            <p>There are many ways to contribute to a greener Boston:</p>
+            <ul style="margin-left: 2rem;">
+                <li>Volunteer for tree planting events</li>
+                <li>Start or join a community garden</li>
+                <li>Attend educational workshops</li>
+                <li>Donate to support our initiatives</li>
+                <li>Spread awareness in your community</li>
+            </ul>
+            <a href="#contact" class="cta-button">Join Us Today</a>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Ready to make Boston greener? Get in touch with us:</p>
+            <p>Email: info@growbostongreener.org</p>
+            <p>Phone: (617) 555-0123</p>
+            <p>Address: 123 Green Street, Boston, MA 02108</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Grow Boston Greener. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href'))?.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple animation for stats when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.target instanceof HTMLElement) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.stat-card').forEach(card => {
+            if (card instanceof HTMLElement) {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.6s ease-out';
+                observer.observe(card);
+            }
+        });
+    </script>
+</body>
+</html>

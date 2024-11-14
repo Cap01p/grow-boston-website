@@ -1,0 +1,264 @@
+---
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Access tree planting resources, guides, and information from Grow Boston Greener. Find educational materials about urban forestry and tree care." />
+    <meta name="keywords" content="tree resources, urban forestry, tree planting guides, Boston trees, tree care" />
+    <title>Resources - Grow Boston Greener</title>
+    <style>
+        :root {
+            --primary-green: #3B7B6F;
+            --light-green: #EDF3F0;
+            --dark-green: #2A5A50;
+            --accent-green: #75A99C;
+            --text-dark: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-green);
+        }
+
+        header {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: var(--dark-green);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-green);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+
+        .resource-section {
+            margin-bottom: 2rem;
+        }
+
+        .resource-list {
+            list-style: none;
+        }
+
+        .resource-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .resource-list li::before {
+            content: "•";
+            color: var(--primary-green);
+            position: absolute;
+            left: 0;
+        }
+
+        a {
+            color: var(--primary-green);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--dark-green);
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            background-color: var(--light-green);
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        footer {
+            background-color: var(--dark-green);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .resource-list a {
+            font-weight: 500;
+            text-decoration: none;
+            color: var(--primary-green);
+            transition: color 0.3s;
+        }
+
+        .resource-list a:hover {
+            color: var(--dark-green);
+            text-decoration: underline;
+        }
+
+        .resource-list li {
+            margin-bottom: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Resources</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/gbg/about.html">About</a></li>
+            <li><a href="/gbg/resources.html">Resources</a></li>
+            <li><a href="/gbg/blog.html">Blog</a></li>
+            <li><a href="/gbg/donate.html">Donate</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <div class="resource-section">
+                <h2>Contact Information</h2>
+                <div class="contact-info">
+                    <p>To request a street tree or yard tree call: <strong>617-635-PARK (7275)</strong></p>
+                </div>
+            </div>
+
+            <div class="resource-section">
+                <h2>Presentations & Reports</h2>
+                <ul class="resource-list">
+                    <li>City of Boston Street Tree Planting Information Presentation (1/24/12) by Tabatha White, Parks Department Planting Coordinator</li>
+                    <li>Massport Trees in the Airport Landscape Presentation (5/22/12) by John Krajovic and John H. Carli</li>
+                    <li>State of the Urban Forest Report (2008) - Summary of Boston's Urban Forest by Urban Ecology Institute</li>
+                    <li>Benefits of Trees and Urban Forests - Research list by Alliance for Community Trees</li>
+                    <li>Urban Forestry Community Engagement Model by Cornell University</li>
+                    <li>America's Great Outdoors (AGO) Initiative</li>
+                    <li>Vibrant Cities & Urban Forests Report</li>
+                </ul>
+            </div>
+
+            <div class="resource-section">
+                <h2>Educational Guides</h2>
+                <ul class="resource-list">
+                    <li><a href="/gbg/posts/spring-tree-planting-guide.html">GBG Guide to Tree Planting</a></li>
+                    <li><a href="/gbg/posts/urban-gardening-boston.html">Urban Gardening Guide</a></li>
+                    <li>GBG Guide to Tree Care and Maintenance</li>
+                    <li>GBG Guide to Greater Boston Street Trees</li>
+                </ul>
+            </div>
+
+            <div class="resource-section">
+                <h2>Tree Information Links</h2>
+                <ul class="resource-list">
+                    <li>General Tree Facts</li>
+                    <li>Species Facts</li>
+                    <li>General Tree Care</li>
+                    <li>Mulch</li>
+                    <li>Pruning</li>
+                </ul>
+            </div>
+
+            <div class="resource-section">
+                <h2>Professional Organizations</h2>
+                <ul class="resource-list">
+                    <li>MA Department of Conservation and Recreation - Urban and Community Forestry Program</li>
+                    <li>Massachusetts Arborists Association</li>
+                    <li>International Society of Arboriculture</li>
+                    <li>Alliance for Community Trees</li>
+                </ul>
+            </div>
+
+            <div class="resource-section">
+                <h2>Newsletters</h2>
+                <ul class="resource-list">
+                    <li>Citizen Forester Newsletter - Published by the MA Department of Conservation and Recreation</li>
+                </ul>
+            </div>
+
+            <div class="resource-section">
+                <h2>Partner Organizations & Resources</h2>
+                <ul class="resource-list">
+                    <li>
+                        <a href="https://treeboston.org" target="_blank" rel="noopener noreferrer">
+                            Tree Boston
+                        </a> - Leading organization dedicated to preserving and expanding Boston's urban forest
+                    </li>
+                    <li>
+                        <a href="https://www.massaudubon.org/our-work/equitable-access-to-nature/nature-in-the-city/boston-tree-alliance" target="_blank" rel="noopener noreferrer">
+                            Boston Tree Alliance (Mass Audubon)
+                        </a> - Coalition working to expand and protect Boston's tree canopy
+                    </li>
+                    <li>
+                        <a href="https://www.boston.gov/departments/parks-and-recreation/urban-forest-plan" target="_blank" rel="noopener noreferrer">
+                            Boston Urban Forest Plan
+                        </a> - City of Boston's comprehensive plan for growing and protecting the urban forest
+                    </li>
+                    <li>
+                        <a href="https://treeboston.org/get-involved/" target="_blank" rel="noopener noreferrer">
+                            Get Involved with Tree Boston
+                        </a> - Volunteer opportunities and ways to support urban forestry in Boston
+                    </li>
+                    <li>
+                        <a href="https://www.americanforests.org/place/boston/" target="_blank" rel="noopener noreferrer">
+                            American Forests Boston Initiative
+                        </a> - National organization's work in Boston to create Tree Equity
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Grow Boston Greener. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
